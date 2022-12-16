@@ -31,18 +31,6 @@ const validateSignup = [
     handleValidationErrors
 ];
 
-// // Get Current User by Id
-// router.get('/:id', validateLogin, async (req, res, next) => {
-//   let userId = req.params.id
-
-//   let user = await User.findByPk('userId')
-
-//   if (user) {
-//     res.statusCode(200)
-//     return res.json(user)
-//   }
-// })
-
 
 
 // Sign up
