@@ -9,8 +9,7 @@ const router = express.Router();
 
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
-// backend/routes/api/session.js
-// ...
+
 
 const validateLogin = [
     check('credential')
@@ -24,11 +23,11 @@ const validateLogin = [
   ];
 
 
+
+
+
 // Log in
-router.post(
-    '/',
-    validateLogin,
-    async (req, res, next) => {
+router.post('/', validateLogin, async (req, res, next) => {
       const { credential, password } = req.body;
   
       const user = await User.login({ credential, password });
