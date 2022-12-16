@@ -32,8 +32,8 @@ const validateSignup = [
 ];
 
 
-// backend/routes/api/users.js
-// ...
+
+
 
 // Sign up
 router.post(
@@ -46,7 +46,13 @@ router.post(
       await setTokenCookie(res, user);
   
       return res.json({
-        user: user
+        user: {
+          id, 
+          firstName,
+          lastName,
+          email,
+          userName // could be userName was userName
+        }
       });
     }
   );
